@@ -3,9 +3,9 @@
 Berikut ini adalah laporan resmi dari Praktikum Jaringan Komputer Modul 1 tahun 2021 di Institut Teknologi Sepuluh Nopember
 
 Dokumen ini ditulis oleh
-05111940000063 - Ryan Garnet Andrianto
-05111940000050 - Erki Kadhafi Rosyid
-05111940000141 - M. Farhan Haykal
+* 05111940000063 - Ryan Garnet Andrianto
+* 05111940000050 - Erki Kadhafi Rosyid
+* 05111940000141 - M. Farhan Haykal
 
 # 1
 # 2
