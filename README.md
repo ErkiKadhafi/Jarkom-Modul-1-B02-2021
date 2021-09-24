@@ -80,8 +80,52 @@ Setelah itu, file `secret.zip` dibuka dengan menggunakan password yang tertulis 
 ![image](https://user-images.githubusercontent.com/8071604/134528682-30f72698-6fa3-4711-be66-6b09ebb5b2df.png)
 
 
-# 11
-# 12
-# 13
-# 14
-# 15
+# 11 Filter sehingga wireshark hanya mengambil paket yang berasal dari port 80!
+
+Pada pengerjaan soal ini, cara kami untuk mendapatkan paket yang berasal dari **port 80** adalah dengan menggunakan capture filter dengan syntax `src port 80` 
+
+![image](images/no_11.png)
+
+dengan hasil seperti dibawah ini
+
+![image](images/no_11_2.png)
+
+# 12 Filter sehingga wireshark hanya mengambil paket yang mengandung port 21!
+
+Pada pengerjaan soal ini, cara kami untuk mendapatkan paket yang mengandung dari **port 21** adalah dengan menggunakan capture filter dengan syntax `port 21` dengan hasil seperti dibawah ini
+
+![image](images/no_12.png)
+
+Tidak tercapture nya filter pada port 21 karena tidak adanya FTP yang dilakukan.
+
+# 13 Filter sehingga wireshark hanya menampilkan paket yang menuju port 443!
+
+Pada pengerjaan soal ini, cara kami untuk mendapatkan paket yang menuju dari **port 443** adalah dengan menggunakan capture filter dengan syntax `dst port 443`
+
+![image](images/no_13.png)
+
+dengan hasil seperti dibawah ini
+
+![image](images/no_13_2.png)
+
+# 14 Filter sehingga wireshark hanya mengambil paket yang tujuannya ke kemenag.go.id!
+
+Pada pengerjaan soal ini, cara kami untuk mendapatkan paket yang menuju dari **kemenag.go.id** adalah dengan menggunakan capture filter dengan syntax `dst host kemenag.go.id` dengan hasil seperti dibawah ini
+
+![image](images/no_14.png)
+
+pada gambar diatas bisa dilihat bahwa semua destination menuju ip address yang sama yaitu milik **kemenag.go.id**.
+
+# 15 Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
+
+Untuk mengerjakan soal ini, kita perlu mengetahui ip address dari device masing masing terlebih dahulu. Untuk hal ini dilakukan dengan cara membuka **cmd** dan mengetik syntax `ipconfig`
+
+![image](images/no_15.png)
+
+Pada hasil penacrian tersebut terlihat bahwa IPv4 dari device adalah **192.168.1.7**. Langkah selanjutnya adalah meng-capture filter dari ip yang berasal dari **192.168.1.7** dengan syntax `src host 192.168.1.7`
+
+![image](images/no_15_2.png)
+
+dengan hasil seperti dibawah ini
+
+![image](images/no_15_3.png)
