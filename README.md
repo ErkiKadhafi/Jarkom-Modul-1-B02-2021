@@ -1,5 +1,5 @@
 # Jarkom-Modul-1-E02-2021
-
+ 
 Berikut ini adalah laporan resmi dari Praktikum Jaringan Komputer Modul 1 tahun 2021 di Institut Teknologi Sepuluh Nopember
 
 Dokumen ini ditulis oleh
@@ -7,11 +7,43 @@ Dokumen ini ditulis oleh
 * 05111940000050 - Erki Kadhafi Rosyid
 * 05111940000141 - M. Farhan Haykal
 
-# 1
-# 2
-# 3
-# 4
-# 5
+# 1 Sebutkan webserver yang digunakan pada "ichimarumaru.tech"! 
+
+Menggunakan wireshark :
+a. display filter menggunakan http.host contains "ichimarumaru.tech".
+b. Klik kanan lalu klik follow -> TCP stream
+c. Web menggunakan server nginx/1.18.0 (Ubuntu)
+
+![ss1](https://user-images.githubusercontent.com/70801807/134680344-8b7fa9e3-6b98-4fd8-a095-9e37d3f6b790.PNG)
+
+# 2 Temukan paket dari web-web yang menggunakan basic authentication method!
+Dengan menggunakan filter http.authbasic maka didapatkan hasil seperti berikut ini:
+
+![ss2](https://user-images.githubusercontent.com/70801807/134680558-b03c402d-a706-4e1a-84ea-47d96abd0652.PNG)
+
+# 3 Ikuti perintah di basic.ichimarumaru.tech! Username dan password bisa didapatkan dari file .pcapng!
+Dengan menggunakan filter “tcp.port == 80” karena web tanpa SSL menggunakan port 80.
+
+![ss3](https://user-images.githubusercontent.com/70801807/134680754-34030ab0-54b3-4a86-b2e0-747afa1d2258.PNG)
+
+![ss3 1](https://user-images.githubusercontent.com/70801807/134680828-d05618a9-e42d-4c9f-8365-0025cc166858.PNG)
+
+# 4 Temukan paket mysql yang mengandung perintah query select!
+Dengan menggunakan filter “tcp.port == 3306” karena mySQL mempunyai port default 3306.
+
+![ss4](https://user-images.githubusercontent.com/70801807/134680988-2198b327-9d3e-4e16-b48b-82df814dda81.PNG)
+
+![ss4 1](https://user-images.githubusercontent.com/70801807/134681081-899d54e7-d0ed-4d4c-b99e-c730a5cd2eb7.PNG)
+
+![ss4 2](https://user-images.githubusercontent.com/70801807/134681179-3a29dc26-b7d4-4f47-b4be-decd78b2e72b.PNG)
+
+# 5 Login ke portal.ichimarumaru.tech kemudian ikuti perintahnya! Username dan password bisa didapat dari query insert pada table users dari file .pcap!
+Dengan menggunakan filter “tcp.port == 3306” karena MySQL mempunyai port default 3306.
+
+![ss5](https://user-images.githubusercontent.com/70801807/134681330-9f770f54-3292-4376-8389-569a540f6b93.PNG)
+
+![ss5 1](https://user-images.githubusercontent.com/70801807/134681557-52149aec-a702-4521-bbdd-1e7015a07798.PNG)
+
 # 6 Cari username dan password ketika melakukan login ke FTP Server!
 
 FTP (File Transfer Protocol) adalah sebuah protokol yang digunakan untuk transfer file antara server dan client.
